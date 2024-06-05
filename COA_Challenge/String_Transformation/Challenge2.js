@@ -2,10 +2,10 @@ function transformString(s) {
     let length = s.length;
     
     if (length % 3 === 0 && length % 5 === 0) {
-        // Length is divisible by 15: perform both operations in order
+        // Length is divisible by 5 and 3: perform both operations in order
         s = s.split('').reverse().join(''); // Reverse the string
         s = s.split('').map(char => char.charCodeAt(0)).join(' '); // Replace each character with its ASCII code
-    } else if (length % 5 === 0) {
+    } else if (length % 5 === 0) { 
         // Length is divisible by 5: replace each character with its ASCII code
         s = s.split('').map(char => char.charCodeAt(0)).join(' ');
     } else if (length % 3 === 0) {
