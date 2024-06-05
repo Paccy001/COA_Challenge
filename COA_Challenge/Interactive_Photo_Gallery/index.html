@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" style="background-image: url('FOX.jpeg');" onclick="showDetails(this)">
+            <div class="card-content">
+                <h2 class="card-title">FENNEC FOX</h2>
+                <p class="card-description">India</p>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('WHALE.jpeg');" onclick="showDetails(this)">
+            <div class="card-content">
+                <h2 class="card-title">HUMPBACK WHALE</h2>
+                <p class="card-description">South Africa</p>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('BABOON.jpeg');" onclick="showDetails(this)">
+            <div class="card-content">
+                <h2 class="card-title">COMMON BROWN BABOON</h2>
+                <p class="card-description">South Africa</p>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('DEER.jpeg');" onclick="showDetails(this)">
+            <div class="card-content">
+                <h2 class="card-title"> SPOTTED DEER</h2>
+                <p class="card-description"> Amazon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for card details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Full Size Image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
